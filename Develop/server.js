@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const db = require('./db/db.json');
-const PORT = 3001;
+const PORT = 3000;
 
 const app = express();
 
@@ -16,13 +16,13 @@ app.get('/notes', (req, res) =>
   res.sendFile(path.join(__dirname, '/public/notes.html'))
 );
 
+// GET route to notes API
+app.get('/api/notes', (req, res) => res.json(db));
+
 // GET Route for feedback page
 app.get('*', (req, res) =>
   res.sendFile(path.join(__dirname, '/public/index.html'))
 );
-
-// GET route to notes API
-app.get('/api/notes', (req, res) => res.json(db));
 
 app.listen(PORT, () =>
   console.log(`App listening at http://localhost:${PORT} 🚀`)
