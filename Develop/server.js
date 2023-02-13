@@ -11,7 +11,7 @@ app.use(express.json());
 
 app.use(express.static('public'));
 
-// GET Route for notes page
+// GET route for notes page
 app.get('/notes', (req, res) =>
   res.sendFile(path.join(__dirname, '/public/notes.html'))
 );
@@ -19,10 +19,18 @@ app.get('/notes', (req, res) =>
 // GET route for notes API
 app.get('/api/notes', (req, res) => res.json(db));
 
-// GET Route for homepage
+// GET route for homepage
 app.get('*', (req, res) =>
   res.sendFile(path.join(__dirname, '/public/index.html'))
 );
+
+// POST request to add a note
+app.post('/api/notes', (req, res) => {
+  // Log that a POST request was received
+  console.info(`${req.method} request received to add a note`);
+  // Log the response body to the console
+  console.log(req.body);
+});
 
 app.listen(PORT, () =>
   console.log(`App listening at http://localhost:${PORT} 🚀`)
