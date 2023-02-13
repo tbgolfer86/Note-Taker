@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
-const db = require('./db/db.json');
+const { v4: uuidv4 } = require('uuid');
 const PORT = 3000;
 
 const app = express();
@@ -59,6 +59,7 @@ app.post('/api/notes', (req, res) => {
     const newNote = {
       title,
       text,
+      note_id: uuidv4(),
     };
  
     readAndAppend(newNote, './db/db.json');
@@ -77,6 +78,11 @@ app.post('/api/notes', (req, res) => {
   // Log the response body to the console
   console.log(req.body);
 });
+
+// DELETE request to delete a note
+app.delete('/api/notes', (req, res) => {
+  res.send('Got a DELETE request at /user')
+})
 
 app.listen(PORT, () =>
   console.log(`App listening at http://localhost:${PORT} 🚀`)
