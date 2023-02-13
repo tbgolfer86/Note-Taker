@@ -59,7 +59,7 @@ app.post('/api/notes', (req, res) => {
     const newNote = {
       title,
       text,
-      note_id: uuidv4(),
+      id: uuidv4(),
     };
  
     readAndAppend(newNote, './db/db.json');
@@ -81,7 +81,7 @@ app.post('/api/notes', (req, res) => {
 
 // DELETE request to delete a note
 app.delete('/api/notes/:id', (req, res) => {
-  let notes = JSON.parse(fs.readFileSync('./db/db.json'));
+  res.send("THIS IS:" + req.params.id)
 });
 
 app.listen(PORT, () =>
