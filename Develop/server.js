@@ -80,9 +80,9 @@ app.post('/api/notes', (req, res) => {
 });
 
 // DELETE request to delete a note
-app.delete('/api/notes', (req, res) => {
-  res.send('Got a DELETE request at /user')
-})
+app.delete('/api/notes/:id', (req, res) => {
+  let notes = JSON.parse(fs.readFileSync('./db/db.json'));
+});
 
 app.listen(PORT, () =>
   console.log(`App listening at http://localhost:${PORT} 🚀`)
