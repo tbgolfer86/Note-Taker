@@ -18,7 +18,11 @@ app.get('/notes', (req, res) =>
 );
 
 // GET route for notes API
-app.get('/api/notes', (req, res) => res.json(db));
+app.get('/api/notes', (req, res) => {
+  let notes = JSON.parse(fs.readFileSync('./db/db.json')); 
+  res.json(notes);
+  console.log('GET NOTES!');
+});
 
 // GET route for homepage
 app.get('*', (req, res) =>
