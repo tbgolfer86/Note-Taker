@@ -22,22 +22,19 @@
 ---
 
   ## Usage
-  The user can run the server.js file in the command-line to start the server and then visit the url logged in the console.
+  The user can run the server.js file in the command-line to start the local server and then visit the url that gets logged to the console.
 
 ---
 
   ## License
   
-  
 ---
 
   ## Contributing
-  N/A
 
 ---
 
   ## Tests 
-  N/A
 
 ---
 
