@@ -1,4 +1,4 @@
-# Note-Taker
+# Note Taker
   
   ## Description
   This is a note taker application that can be used to write and save notes. This application uses an Express.js back end and saves and retrieves note data from a JSON file.
@@ -23,10 +23,11 @@
 
   ## Usage
   The user can run the server.js file in the command-line to start the local server and then visit the url that gets logged to the console.<br><br>
+  This app is also being hosted on [Heroku](https://note-creator-uconn.herokuapp.com).<br><br>
    This screenshot shows the homepage:
-![alt text](/Assets/Screenshot%202023-02-12%20at%2010.06.05%20PM.png)<br>
+  ![alt text](/Assets/Screenshot%202023-02-12%20at%2010.06.05%20PM.png)<br>
    This screenshot shows the notes page:
-![alt text](/Assets/Screenshot%202023-02-12%20at%2010.07.31%20PM.png)
+  ![alt text](/Assets/Screenshot%202023-02-12%20at%2010.07.31%20PM.png)
 
 ---
 
