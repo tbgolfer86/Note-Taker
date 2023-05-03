@@ -23,7 +23,8 @@
 
   ## Usage
   The user can run the server.js file in the command-line to start the local server and then visit the url that gets logged to the console.<br><br>
-  This app is also being hosted on [Heroku](https://note-creator-uconn.herokuapp.com).<br><br>
+  This app is also being hosted on [Heroku](https://note-creator-uconn.herokuapp.com).<br>
+  Disclaimer: This application may be disconnected from Heroku for billing purposes.<br><br>
    This screenshot shows the homepage:<br>
   ![alt text](./Assets/Screenshot%202023-02-12%20at%2010.06.05%20PM.png)<br><br>
    This screenshot shows the notes page:<br>
